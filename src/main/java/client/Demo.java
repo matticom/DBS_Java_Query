@@ -19,6 +19,7 @@ public class Demo {
 	public void selectAll() {
 		List<Person> personList = personDAO.selectAllPersons();
 		for (Person person : personList) {
+			System.out.println("\n-----------------------------------------------------------------------");
 			System.out.println(person.toString());
 			System.out.println("\n");
 		}
