@@ -11,6 +11,9 @@
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider> <!-- optional, weil default Provider -->
 		        
 		<class>model.Person</class>
+		<class>model.Kandidat</class>
+		<class>model.QueryData</class>
+		<class>model.Sendung</class>
 
 		<properties>
 			<property name="eclipselink.ddl-generation" value="none" />

@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>UNI</groupId>
   <artifactId>Datenbanksysteme</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>1.0</version>
   <name>DBS Java Implementation</name>
   <build>
   <sourceDirectory> src/main/java </sourceDirectory>
@@ -83,14 +83,5 @@
     		<scope>system</scope>
     		<systemPath>${project.basedir}/lib/ojdbc6.jar</systemPath>
 		</dependency>
-		
-	</dependencies>
-<!--   <repositories> -->
-<!-- 		<repository> -->
-<!-- 			<id>oss.sonatype.org</id> -->
-<!-- 			<name>OSS Sonatype Staging</name> -->
-<!-- 			<url>https://oss.sonatype.org/content/groups/staging</url> -->
-<!-- 		</repository> -->
-<!-- 	</repositories> -->
-  
+	</dependencies> 
 </project>

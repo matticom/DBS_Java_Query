@@ -6,7 +6,13 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
+import dao.AOL_QueryDAO;
+import dao.KandidatDAO;
 import dao.PersonDAO;
+import dao.SendungDAO;
+import model.QueryData;
+import model.Sendung;
+import model.Kandidat;
 import model.Person;
 
 public class Demo {
@@ -15,6 +21,9 @@ public class Demo {
 	private static EntityManager entitymanager;
 
 	private PersonDAO personDAO;
+	private KandidatDAO kandidatDAO;
+	private AOL_QueryDAO aolQueryDAO;
+	private SendungDAO sendungDAO;
 
 	public void selectAll() {
 		List<Person> personList = personDAO.selectAllPersons();
@@ -22,6 +31,20 @@ public class Demo {
 			System.out.println("\n-----------------------------------------------------------------------");
 			System.out.println(person.toString());
 			System.out.println("\n");
+		}
+		List<Kandidat> kandidatList = kandidatDAO.selectAllKandidats();
+		for (Kandidat kandidat : kandidatList) {
+			System.out.println("\n-----------------------------------------------------------------------");
+			System.out.println(kandidat.toString());
+			System.out.println("\n");
+		}
+//		List<QueryData> aolQueryList = aolQueryDAO.selectFirstAOLQueries();
+//		for (QueryData aolQuery : aolQueryList) {
+//			System.out.println(aolQuery.toString());
+//		}
+		List<Sendung> sendungList = sendungDAO.selectAllSendungen();
+		for (Sendung sendung : sendungList) {
+			System.out.println(sendung.toString());
 		}
 	}
 
@@ -34,6 +57,9 @@ public class Demo {
 		}
 
 		personDAO = new PersonDAO(entitymanager);
+		kandidatDAO = new KandidatDAO(entitymanager);
+		aolQueryDAO = new AOL_QueryDAO(entitymanager);
+		sendungDAO = new SendungDAO(entitymanager);
 	}
 	
 	public void tearDown() {
