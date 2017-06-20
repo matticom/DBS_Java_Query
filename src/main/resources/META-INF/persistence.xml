@@ -14,6 +14,7 @@
 		<class>model.Kandidat</class>
 		<class>model.QueryData</class>
 		<class>model.Sendung</class>
+		<class>model.Anfrage6</class>
 
 		<properties>
 			<property name="eclipselink.ddl-generation" value="none" />
