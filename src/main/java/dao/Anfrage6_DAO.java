@@ -35,7 +35,7 @@ public class Anfrage6_DAO {
 			  + "inner join sendung "
 			  + "on TO_CHAR(sendung.AIR_DATE, 'MM.DD') = aol_querydata.Date_MM_DD "
 			  + "order by aol_querydata.Date_MM_DD", Anfrage6.class);
-//		query.setParameter(1, columnName);
+		//		query.setParameter(1, columnName);
 //		query.setParameter(2, QUERY_STRING);
 		System.out.println(query);
 		return query.getResultList();
