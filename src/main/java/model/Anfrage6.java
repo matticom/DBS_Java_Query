@@ -20,7 +20,7 @@ public class Anfrage6 {
 	@Column(name = "SENDUNGSNAME")
 	private 	String	show;
 	
-	@Column(name = "SUCHEANFRAGEN_MENGE")
+	@Column(name = "SUCHANFRAGEN_MENGE")
 	private 	int numberOfQueries;
 	
 	@Column(name = "ZUSCHAUERANZAHL")

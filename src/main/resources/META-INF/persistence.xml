@@ -14,7 +14,9 @@
 		<class>model.Kandidat</class>
 		<class>model.QueryData</class>
 		<class>model.Sendung</class>
+		<class>model.Anfrage5</class>
 		<class>model.Anfrage6</class>
+		<class>model.Anfrage7</class>
 
 		<properties>
 			<property name="eclipselink.ddl-generation" value="none" />
@@ -22,8 +24,8 @@
 
 			<property name="eclipselink.target-database" value="" />
 			<property name="javax.persistence.jdbc.driver" value="oracle.jdbc.driver.OracleDriver" />
-			<property name="javax.persistence.jdbc.url"	value="jdbc:oracle:thin:@dbl43.beuth-hochschule.de:1521:oracle" />
-<!-- 			<property name="javax.persistence.jdbc.url"	value="jdbc:oracle:thin:@localhost:1521:oracle" /> -->
+<!-- 			<property name="javax.persistence.jdbc.url"	value="jdbc:oracle:thin:@dbl43.beuth-hochschule.de:1521:oracle" /> -->
+			<property name="javax.persistence.jdbc.url"	value="jdbc:oracle:thin:@localhost:1521:oracle" />
 			<property name="javax.persistence.jdbc.user" value="S856414" />
 			<property name="javax.persistence.jdbc.password" value="@oMu5nch5n" />
 		</properties>

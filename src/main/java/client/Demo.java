@@ -7,13 +7,15 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 import dao.AOL_QueryDAO;
-import dao.Anfrage6_DAO;
+import dao.Anfragen_DAO;
 import dao.KandidatDAO;
 import dao.PersonDAO;
 import dao.SendungDAO;
 import model.QueryData;
 import model.Sendung;
+import model.Anfrage5;
 import model.Anfrage6;
+import model.Anfrage7;
 import model.Kandidat;
 import model.Person;
 
@@ -26,7 +28,7 @@ public class Demo {
 	private KandidatDAO kandidatDAO;
 	private AOL_QueryDAO aolQueryDAO;
 	private SendungDAO sendungDAO;
-	private Anfrage6_DAO anfrage6DAO;
+	private Anfragen_DAO anfrageDAO;
 
 	public void selectAll() {
 		List<Person> personList = personDAO.selectAllPersons();
@@ -50,9 +52,9 @@ public class Demo {
 			System.out.println(sendung.toString());
 		}
 		
-		List<Anfrage6> anfrage6List = anfrage6DAO.anfrage6();
-		for (Anfrage6 anfrage6_Entity : anfrage6List) {
-			System.out.println(anfrage6_Entity.toString());
+		List<Anfrage7> anfrage7List = anfrageDAO.anfrage7();
+		for (Anfrage7 anfrage7_Entity : anfrage7List) {
+			System.out.println(anfrage7_Entity.toString());
 		}
 	}
 
@@ -68,7 +70,7 @@ public class Demo {
 		kandidatDAO = new KandidatDAO(entitymanager);
 		aolQueryDAO = new AOL_QueryDAO(entitymanager);
 		sendungDAO = new SendungDAO(entitymanager);
-		anfrage6DAO = new Anfrage6_DAO(entitymanager);
+		anfrageDAO = new Anfragen_DAO(entitymanager);
 	}
 	
 	public void tearDown() {
