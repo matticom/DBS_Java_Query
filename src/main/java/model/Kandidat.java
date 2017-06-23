@@ -25,6 +25,13 @@ public class Kandidat {
 	public Kandidat() {
 	}
 
+	public Kandidat(long kid, String vorname, String nachname, String geschlecht) {
+		this.kid = kid;
+		this.vorname = vorname;
+		this.nachname = nachname;
+		this.geschlecht = geschlecht;
+	}
+
 	public long getKid() {
 		return kid;
 	}

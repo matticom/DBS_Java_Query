@@ -1,0 +1,13 @@
+1;Do I make you proud;104
+2;Over the rainbow;70
+3;My destiny;41
+4;Levon;23
+5;Black horse and the cherry tree;22
+6;I believe I can fly;14
+7;Dancing in the dark;9
+8;You are so beautiful;9
+9;Try a little tenderness;5
+10;Open arms;4
+11;Living for the city;3
+12;What you won''t do for love;2
+13;I believe to my soul;1

@@ -14,8 +14,11 @@ public class Anfrage7 {
 	@Column(name = "EID")
 	private 	long	eId;
 	
-	@Column(name = "NAME")
-	private 	String 	name;
+	@Column(name = "VNAME")
+	private 	String 	vname;
+	
+	@Column(name = "NNAME")
+	private 	String 	nname;
 	
 	@Column(name = "ANZAHL_DER_SUCHANFRAGEN")
 	private 	int numberOfQueries;
@@ -27,6 +30,14 @@ public class Anfrage7 {
 		
 	}
 
+	public Anfrage7(long eId, String vname, String nname, int numberOfQueries, String status) {
+		this.eId = eId;
+		this.vname = vname;
+		this.nname = nname;
+		this.numberOfQueries = numberOfQueries;
+		this.status = status;
+	}
+
 	public long geteId() {
 		return eId;
 	}
@@ -35,12 +46,20 @@ public class Anfrage7 {
 		this.eId = eId;
 	}
 
-	public String getName() {
-		return name;
+	public String getVname() {
+		return vname;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setVname(String vname) {
+		this.vname = vname;
+	}
+
+	public String getNname() {
+		return nname;
+	}
+
+	public void setNname(String nname) {
+		this.nname = nname;
 	}
 
 	public int getNumberOfQueries() {
@@ -61,7 +80,7 @@ public class Anfrage7 {
 
 	@Override
 	public String toString() {
-		return "Anfrage7 [eId=" + eId + ", name=" + name + ", numberOfQueries=" + numberOfQueries + ", status=" + status
-				+ "]";
+		return "Anfrage7 [eId=" + eId + ", vname=" + vname + ", nname=" + nname + ", numberOfQueries=" + numberOfQueries + ", status=" + status + "]";
 	}
+	
 }

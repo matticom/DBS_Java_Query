@@ -25,6 +25,11 @@ public class Anfrage5 {
 		
 	}
 
+	public Anfrage5(long eId, String titel, int numberOfQueries) {
+		this.eId = eId;
+		this.titel = titel;
+		this.numberOfQueries = numberOfQueries;
+	}
 
 	public long geteId() {
 		return eId;

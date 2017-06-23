@@ -29,8 +29,14 @@ public class Anfrage6 {
 	public Anfrage6() {
 	}
 
-	
-	
+	public Anfrage6(long eId, String date_MMDD, String show, int numberOfQueries, int numberOfViewers) {
+		this.eId = eId;
+		this.date_MMDD = date_MMDD;
+		this.show = show;
+		this.numberOfQueries = numberOfQueries;
+		this.numberOfViewers = numberOfViewers;
+	}
+
 	public long geteId() {
 		return eId;
 	}
