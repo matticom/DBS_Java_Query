@@ -1,0 +1,15 @@
+8;Katherine McPhee;05.23;13
+14;Stevie Wonder;05.23;1
+12;KT Tunstall;05.23;7
+5;Judy Garland;05.23;7
+3;Elton John;05.23;9
+10;Katherine McPhee;05.24;28
+13;KT Tunstall;05.24;1
+1;Elton John;05.24;3
+15;Tyler Hicks;05.24;1
+4;Judy Garland;05.25;1
+7;Katherine McPhee;05.25;10
+11;KT Tunstall;05.26;2
+2;Elton John;05.26;4
+9;Katherine McPhee;05.26;22
+6;Judy Garland;05.26;86

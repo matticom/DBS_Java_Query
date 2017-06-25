@@ -1,5 +1,6 @@
 package client;
 
+import java.time.Instant;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -13,9 +14,17 @@ import dao.PersonDAO;
 import dao.SendungDAO;
 import model.QueryData;
 import model.Sendung;
+import model.Anfrage1;
+import model.Anfrage10_JUR;
+import model.Anfrage10_MOD;
+import model.Anfrage2;
+import model.Anfrage3;
+import model.Anfrage4;
 import model.Anfrage5;
 import model.Anfrage6;
 import model.Anfrage7;
+import model.Anfrage8;
+import model.Anfrage9;
 import model.Kandidat;
 import model.Person;
 
@@ -43,19 +52,18 @@ public class Demo {
 			System.out.println(kandidat.toString());
 			System.out.println("\n");
 		}
-//		List<QueryData> aolQueryList = aolQueryDAO.selectFirstAOLQueries();
-//		for (QueryData aolQuery : aolQueryList) {
-//			System.out.println(aolQuery.toString());
-//		}
+
 		List<Sendung> sendungList = sendungDAO.selectAllSendungen();
 		for (Sendung sendung : sendungList) {
 			System.out.println(sendung.toString());
 		}
-		
-		List<Anfrage7> anfrage7List = anfrageDAO.anfrage7();
-		for (Anfrage7 anfrage7_Entity : anfrage7List) {
+		long start = Instant.now().getEpochSecond();
+		List<Anfrage9> anfrage7List = anfrageDAO.anfrage9();
+		for (Anfrage9 anfrage7_Entity : anfrage7List) {
 			System.out.println(anfrage7_Entity.toString());
 		}
+		long ende = Instant.now().getEpochSecond();
+		System.err.println(ende-start + " Sekunden benötigt für die Abfrage");
 	}
 
 	public void setUpDB() {

@@ -1,0 +1,10 @@
+1;http://american.idolblog.com;411
+2;http://idolforums.com;162
+3;http://television.aol.com;588
+4;http://www.codemasters.com;369
+5;http://www.idolonfox.com;8952
+6;http://www.msnbc.msn.com;167
+7;http://www.realitytvworld.com;227
+8;http://www.sirlinksalot.net;786
+9;http://www.tv.com;756
+10;http://www.virtualvermont.com;246

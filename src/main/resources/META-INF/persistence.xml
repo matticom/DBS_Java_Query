@@ -14,9 +14,18 @@
 		<class>model.Kandidat</class>
 		<class>model.QueryData</class>
 		<class>model.Sendung</class>
+		<class>model.Anfrage1</class>
+		<class>model.Anfrage2</class>
+		<class>model.Anfrage3</class>
+		<class>model.Anfrage4</class>
 		<class>model.Anfrage5</class>
 		<class>model.Anfrage6</class>
 		<class>model.Anfrage7</class>
+		<class>model.Anfrage8</class>
+		<class>model.Anfrage9</class>
+		<class>model.Anfrage10_MOD</class>
+		<class>model.Anfrage10_JUR</class>
+		
 
 		<properties>
 			<property name="eclipselink.ddl-generation" value="none" />

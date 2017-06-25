@@ -1,3 +1,4 @@
+package util;
 
 import java.io.File;
 import java.io.FileReader;
@@ -7,18 +8,25 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import model.Anfrage1;
+import model.Anfrage10_JUR;
+import model.Anfrage2;
+import model.Anfrage3;
+import model.Anfrage4;
 import model.Anfrage5;
 import model.Anfrage6;
 import model.Anfrage7;
+import model.Anfrage8;
+import model.Anfrage9;
 
 
 public class UtilMethods {
 
-	public static List readEntitiesFromFile(Class entityClass, File file) {
+	public List<?> readEntitiesFromFile(String entityClassName, File file) {
 		
 		try (FileReader fileReader = new FileReader(file); Scanner in = new Scanner(fileReader)) {
 			String[] lines = createLinesArray(in);
-			return createEntityList(lines, entityClass);
+			return createEntityList(lines, entityClassName);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -26,7 +34,7 @@ public class UtilMethods {
 		return null;
 	}
 
-	private static String[] createLinesArray(Scanner in) {
+	private String[] createLinesArray(Scanner in) {
 		List<String> arrayList = new ArrayList<String>();
 		while (in.hasNextLine()) {
 			arrayList.add(in.nextLine());
@@ -34,7 +42,14 @@ public class UtilMethods {
 		return arrayList.toArray(new String[arrayList.size()]);
 	}
 
-	private static List createEntityList(String[] lines, Class entityClass) {
+	private List createEntityList(String[] lines, String entityClassName) {
+		Class entityClass = null;
+		try {
+			entityClass = Class.forName(entityClassName);
+		} catch (ClassNotFoundException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		List list = new ArrayList();
 		Constructor constructor = null;
 		for(int i=0; i < entityClass.getConstructors().length; i++) {
@@ -77,10 +92,16 @@ public class UtilMethods {
 			return Double.parseDouble(value);
 		return value;
 	}
+	
+	public static List<Anfrage6> readEntitiesFromAnfrage6() {
+		UtilMethods utilClass = new UtilMethods();
+		return (List<Anfrage6>)utilClass.readEntitiesFromFile("model.Anfrage6", new File("./src/test/resources/result_anfrage6.txt"));
+	}
 
 	public static void main(String[] args) {
-		List<Anfrage5> list = (List<Anfrage5>)readEntitiesFromFile(Anfrage5.class, new File("./src/test/resources/result_anfrage5.txt"));
-		for(Anfrage5 entity : list) {
+//		List<Anfrage6> list = (List<Anfrage6>)readEntitiesFromFile(Anfrage6.class, new File("./src/test/resources/result_anfrage6.txt"));
+		List<Anfrage6> list = readEntitiesFromAnfrage6();
+		for(Anfrage6 entity : list) {
 			System.out.println(entity.toString());
 		}
 	}
