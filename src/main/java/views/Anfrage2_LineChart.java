@@ -1,6 +1,6 @@
-package client;
+package views;
 
-import static jFreeChart.Anfrage6_BarChartCreator.*;
+import static jFreeChart.Anfrage2_LineChartCreator.*;
 
 import java.io.File;
 import java.io.FileReader;
@@ -15,24 +15,33 @@ import org.jfree.chart.JFreeChart;
 import org.jfree.ui.ApplicationFrame;
 import org.jfree.ui.RefineryUtilities;
 
+import model.Anfrage1;
+import model.Anfrage2;
 import model.Anfrage6;
 
-public class Anfrage6_BarChartTwoAxis {
+public class Anfrage2_LineChart {
 
 	public static void main(String[] args) {
-		List<Anfrage6> list = readEntitiesFromAnfrage6();
-		JFreeChart chart = createAnfrage6Chart(list);
+		
+		// Anfrage-Ergebnisse direkt von der Datenbank holen
+//		AnfragenDBzuList db2List = new AnfragenDBzuList();
+//		List<Anfrage2> list = (List<Anfrage2>)db2List.getDataFromDB(Anfragen.Anfrage2);
+		
+		// Anfrage-Ergebnisse von Datei lesen
+		List<Anfrage2> list = readEntitiesFromAnfrage2();
+				
+		JFreeChart chart = createAnfrage2Chart(list);
 		ChartPanel chartPanel = new ChartPanel(chart);
 	    chartPanel.setPreferredSize(new java.awt.Dimension(500, 270));
-	   	ApplicationFrame appFrame = new ApplicationFrame("Anfrage6");
+	   	ApplicationFrame appFrame = new ApplicationFrame("Anfrage2");
 		appFrame.getContentPane().add(chartPanel);
 		appFrame.setSize(560, 367);
 		RefineryUtilities.centerFrameOnScreen(appFrame);
 		appFrame.setVisible(true);
 	}
 
-	public static List<Anfrage6> readEntitiesFromAnfrage6() {
-		return (List<Anfrage6>)readEntitiesFromFile(Anfrage6.class, new File("./src/test/resources/result_anfrage6.txt"));
+	public static List<Anfrage2> readEntitiesFromAnfrage2() {
+		return (List<Anfrage2>)readEntitiesFromFile(Anfrage2.class, new File("./src/test/resources/result_anfrage2.txt"));
 	}
 	
 	public static List<?> readEntitiesFromFile(Class entityClass, File file) {

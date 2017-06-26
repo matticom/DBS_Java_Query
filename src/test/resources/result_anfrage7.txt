@@ -1,10 +1,10 @@
-1;Taylor;Hicks;3265;Kandidat
-2;Chris;Daughtry;2403;Kandidat
-3;Paula;Abdul;1398;Juror
-4;Katharine;McPhee;917;Kandidat
-5;Simon;Cowell;529;Juror
-6;Elliott;Yamin;424;Kandidat
-7;Randy;Jackson;240;Juror
+1;Paula;Abdul;1398;Juror
+2;Simon;Cowell;529;Juror
+3;Randy;Jackson;240;Juror
+4;Taylor;Hicks;3265;Kandidat
+5;Chris;Daughtry;2403;Kandidat
+6;Katharine;McPhee;917;Kandidat
+7;Elliott;Yamin;424;Kandidat
 8;Ace;Young;705;Kandidat
 9;Ayla;Brown;65;Kandidat
 10;Becky;O'Donohue;45;Kandidat

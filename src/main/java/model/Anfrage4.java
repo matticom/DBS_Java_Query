@@ -7,7 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Anfrage4 {
+public class Anfrage4 implements Anfrage_IF {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -67,5 +67,6 @@ public class Anfrage4 {
 	public String toString() {
 		return "Anfrage4 [eId=" + eId + ", date_MMDD=" + date_MMDD + ", numberOfQueries=" + numberOfQueries + "]";
 	}
+
 
 }

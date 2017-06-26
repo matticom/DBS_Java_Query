@@ -58,8 +58,8 @@ public class Demo {
 			System.out.println(sendung.toString());
 		}
 		long start = Instant.now().getEpochSecond();
-		List<Anfrage9> anfrage7List = anfrageDAO.anfrage9();
-		for (Anfrage9 anfrage7_Entity : anfrage7List) {
+		List<Anfrage4> anfrage7List = anfrageDAO.anfrage4();
+		for (Anfrage4 anfrage7_Entity : anfrage7List) {
 			System.out.println(anfrage7_Entity.toString());
 		}
 		long ende = Instant.now().getEpochSecond();

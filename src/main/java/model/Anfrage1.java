@@ -7,7 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Anfrage1 {
+public class Anfrage1 implements Anfrage_IF{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
