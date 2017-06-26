@@ -26,11 +26,11 @@ public class Anfrage4_BarChart {
 	public static void main(String[] args) {
 		
 		// Anfrage-Ergebnisse direkt von der Datenbank holen
-		AnfragenDBzuList db2List = new AnfragenDBzuList();
-		List<Anfrage4> list = (List<Anfrage4>)db2List.getDataFromDB(Anfragen.Anfrage4);
+//		AnfragenDBzuList db2List = new AnfragenDBzuList();
+//		List<Anfrage4> list = (List<Anfrage4>)db2List.getDataFromDB(Anfragen.Anfrage4);
 		
 		// Anfrage-Ergebnisse von Datei lesen
-//		List<Anfrage4> list = readEntitiesFromAnfrage4();
+		List<Anfrage4> list = readEntitiesFromAnfrage4();
 				
 		JFreeChart chart = createAnfrage4Chart(list);
 		ChartPanel chartPanel = new ChartPanel(chart);
