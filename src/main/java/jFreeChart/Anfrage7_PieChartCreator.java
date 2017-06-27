@@ -29,8 +29,6 @@ public class Anfrage7_PieChartCreator {
 	}
 
 	protected JFreeChart createChart() {
-
-//		barChart.getLegend().setVisible(false);
 		
 		DefaultPieDataset dataset = new DefaultPieDataset();
 		for (int i = 0; i < anfrageList.size(); i++) {
@@ -41,10 +39,8 @@ public class Anfrage7_PieChartCreator {
 			dataset.setValue(anfrageList.get(i).getVname() + " " + name, anfrageList.get(i).getNumberOfQueries());
 		}
 
-		JFreeChart chart = ChartFactory.createPieChart("Wie häufig wurden die Juroren im Vergleich zu den Kandidaten gesucht?", // chart title
-				dataset, // data
-				true, // include legend
-				true, false);
+		JFreeChart chart = ChartFactory.createPieChart("Wie häufig wurden die Juroren im Vergleich zu den Kandidaten gesucht?",
+				dataset, true,true, false);
 
 		final PiePlot plot = (PiePlot) chart.getPlot();
 		plot.setStartAngle(270);

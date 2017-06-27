@@ -97,14 +97,6 @@ public class Anfrage10_BarChartCreator {
 			}
 		}
 		
-		for(Anfrage10_MOD anfrage: anfrageListMOD) {
-			System.out.println(anfrage);
-		}
-		
-		for(Anfrage10_JUR anfrage: anfrageListJUR) {
-			System.out.println(anfrage);
-		}
-		
 		List<Anfrage10_JUR> personList = new ArrayList<Anfrage10_JUR>();
 		
 		List<String> modJur = new ArrayList<String>();
