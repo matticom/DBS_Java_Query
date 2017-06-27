@@ -33,7 +33,7 @@ public class Anfrage1_LineChartCreator {
 			}
 	      
 	      JFreeChart lineChartObject = ChartFactory.createLineChart(
-	         "Anzahl der Anfragen zu „american idol“ pro Tag","Tage","Anzahl der Anfragen",
+	         "Wie war der Verlauf der Anzahl der Anfragen zu 'american idol' pro Tag im Zeitraum (März bis Juni)?","Tage","Anzahl der Anfragen",
 	         line_chart_dataset,PlotOrientation.VERTICAL,
 	         true,true,false);
 	      

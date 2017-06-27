@@ -85,7 +85,8 @@ public class Anfrage6_BarChartTwoAxisCreator {
             }
         };
         
-        final JFreeChart chart = new JFreeChart("Gegenüberstellung der Anfragen nach 'American Idol' und Zuschauer bei den Shows", plot);
+        final JFreeChart chart = new JFreeChart("Wie ist der Verlauf der Suchanfragen an dem jeweiligen Tag der "
+        		+ "Sendungen im Vergleich zur Zuschaueranzahl nach Nielson Rating?", plot);
         chart.setBackgroundPaint(Color.white);
         plot.setOrientation(PlotOrientation.VERTICAL);
         plot.setBackgroundPaint(new Color(0xEE, 0xEE, 0xFF));

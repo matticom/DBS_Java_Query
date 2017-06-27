@@ -29,7 +29,7 @@ public class Anfrage3_BarChartHorizontalCreator {
 			bar_chart_dataset.addValue(anfrageList.get(i).getNumberOfQueries(), "Anfragen", anfrageList.get(i).getClickURL());
 		}
 
-		JFreeChart barChart = ChartFactory.createBarChart3D("Die meistgeklicken Webseitenlinks bei der Suche nach 'american idol'", "Webseiten", "Klicks", 
+		JFreeChart barChart = ChartFactory.createBarChart3D("Welche Seiten wurden mit Bezug auf 'american idol' am häufigsten angeklickt?", "Webseiten", "Klicks", 
 				bar_chart_dataset, PlotOrientation.HORIZONTAL, true, true, false);
 		barChart.getLegend().setVisible(false);
 		return barChart;

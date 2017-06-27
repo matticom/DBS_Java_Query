@@ -34,7 +34,7 @@ public class Anfrage2_LineChartCreator {
 			}
 	      
 	      JFreeChart lineChartObject = ChartFactory.createLineChart(
-	         "Anzahl der Anfragen zu „american idol“ pro Stunde über alle Tage","Stunde","Anzahl der Anfragen",
+	         "Zu welcher Tageszeit (pro h im Durchschnitt über alle Tage) wurde am häufigsten nach 'american idol' gesucht?","Stunde des Tages","Anzahl der Anfragen",
 	         line_chart_dataset,PlotOrientation.VERTICAL,
 	         true,true,false);
 	      

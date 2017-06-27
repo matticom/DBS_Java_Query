@@ -13,7 +13,7 @@ public class Anfrage8 implements Anfrage_IF {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "EID")
 	private 	long	eId;
-	
+
 	@Column(name = "ITEMRANK")
 	private 	String 	itemRank;
 	
@@ -31,6 +31,8 @@ public class Anfrage8 implements Anfrage_IF {
 		this.numberOfQueries = numberOfQueries;
 	}
 
+
+
 	public long geteId() {
 		return eId;
 	}
@@ -40,6 +42,7 @@ public class Anfrage8 implements Anfrage_IF {
 		this.eId = eId;
 	}
 	
+
 	public String getItemRank() {
 		return itemRank;
 	}
