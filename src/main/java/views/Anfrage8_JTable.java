@@ -2,6 +2,7 @@ package views;
 
 import static jFreeChart.Anfrage8_JTableCreator.*;
 
+import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.io.File;
 import java.io.FileReader;
@@ -11,8 +12,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import javax.swing.JLabel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
+import javax.swing.SwingConstants;
 
 import org.jfree.ui.ApplicationFrame;
 import org.jfree.ui.RefineryUtilities;
@@ -35,7 +38,11 @@ public class Anfrage8_JTable {
 		
 		scrollPane.setPreferredSize(new Dimension(500, 270));
 	   	ApplicationFrame appFrame = new ApplicationFrame("Anfrage8");
-		appFrame.getContentPane().add(scrollPane);
+	   	JLabel question = new JLabel("Welche Ranks wurden beim Suchen nach 'american idol' am häufigsten angeklickt?");
+	   	question.setHorizontalAlignment(SwingConstants.CENTER);
+	   	question.setPreferredSize(new Dimension(500, 60));
+		appFrame.getContentPane().add(scrollPane, BorderLayout.CENTER);
+		appFrame.getContentPane().add(question, BorderLayout.NORTH);
 		appFrame.setSize(560, 367);
 		RefineryUtilities.centerFrameOnScreen(appFrame);
 		appFrame.setVisible(true);
